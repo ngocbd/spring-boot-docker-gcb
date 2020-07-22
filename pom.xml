@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.fcs</groupId>
-	<artifactId>docker.gcb</artifactId>
+	<artifactId>spring-boot-docker-gcb</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-boot-docker-gcb</name>
 	<description>Demo project for Spring Boot Docker Google Cloud Build</description>
