@@ -1,4 +1,10 @@
-FROM openjdk:8-jdk-alpine
-ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+FROM maven:3.6.3-jdk-8
+ 
+# copy the source tree and the pom.xml to our new container
+COPY ./ ./
+ 
+# package our application code
+RUN mvn clean package
+ 
+# set the startup command to execute the jar
+CMD ["java", "-jar", "target/spring-boot-docker-gcb-0.0.1-SNAPSHOT.jar"]
